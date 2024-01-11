@@ -118,7 +118,7 @@ file.write("%.20E\n"%seed_new)
 
 while(fi < f_max):
     zi = f_0/fi - 1
-    probtot = prob(zi, halomass_min, halomass_max, p)*((1+zi)**2/f_0)*delnu
+    #probtot = prob(zi, halomass_min, halomass_max, p)*((1+zi)**2/f_0)*delnu
     rand = np.random.rand(1)[0]
     if rand < 0.01 :
         z_array.append(zi)
