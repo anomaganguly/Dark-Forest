@@ -105,7 +105,7 @@ z_array = []
 f_array = []
 alpha_array=[]
 fi = f_min
-delz = 0.01/(max(prob(zmin, halomass_min, halomass_max, p), prob(zmax, halomass_min, halomass_max, p)))
+delz = 0.1/(max(prob(zmin, halomass_min, halomass_max, p), prob(zmax, halomass_min, halomass_max, p)))
 delnu = delz*f_0/((1+zmax)**2)
 
 
@@ -120,7 +120,7 @@ while(fi < f_max):
     zi = f_0/fi - 1
     #probtot = prob(zi, halomass_min, halomass_max, p)*((1+zi)**2/f_0)*delnu
     rand = np.random.rand(1)[0]
-    if rand < 0.01 :
+    if rand < 0.1 :
         z_array.append(zi)
         f_array.append(fi)
         mh = halomass(zi)
